@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2301110142 김수아 0320</title>
+    <style>
+        body{
+            background-color: lightyellow;
+            transition: 0.3s;
+        }
+        .bgcolor--blue{
+            background-color: lightblue;
+            transition: 0.3s;
+        }
+        .bgcolor--gray{
+            background-color: lightgray;
+            transition: 0.3s;
+        }
+        .btns {
+            position: relative;
+            top: 60px;
+            width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <button class="btn__toggle">배경색상변경_토글버튼</button>
+        <button class="btn__reset">배경색상변경_리셋</button>
+        <button class="btn__bggray">배경색상변경_그레이</button>
+    </div>
+
+    <script>
+        /*
+        if(273 < 52){
+            alert('273은 52보다 작습니다.')
+        }
+        if(273 > 52){
+            alert('273은 52보다 큽니다.')
+        }
+        console.log ('표현식 273+52의 값은 ${273+52}입니다…!')
+        console.log (`표현식 273+52의 값은 ${273+52}입니다…!`)
+
+        const pi = 3.141592;
+        const r = 10;
+        console.log(2*pi*r)
+        */
+
+        //배경색상변경_토글버튼
+        const btnToggle = document.querySelector('.btn__toggle')
+        //addEventListener('이벤트, 실행함수');
+        btnToggle.addEventListener('click',function(){
+            document.body.classList.toggle('bgcolor--blue')
+        });
+
+        //배경색상변경_그레이
+        const btnBgGray = document.querySelector('.btn__bggray')
+        btnBgGray.addEventListener('click',function(){
+            document.body.classList.add('bgcolor--gray')
+        });
+
+        //배경색상변경_리셋
+        const btnReset = document.querySelector('.btn__reset')
+        btnReset.addEventListener('click', function(){
+            document.body.classList.remove('bgcolor--gray')
+            document.body.classList.remove('bgcolor--blue')
+        });
+    </script>
+</body>
+</html>
